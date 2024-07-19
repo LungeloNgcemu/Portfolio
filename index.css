@@ -1,0 +1,872 @@
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Merienda', cursive;
+    scroll-behavior: smooth;
+
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+p {
+    font-family: "Acme", sans-serif;
+
+    font-style: normal;
+    font-weight: normal;
+}
+
+ul {
+    font-family: "Acme", sans-serif;
+
+    font-style: normal;
+    font-weight: normal;
+}
+
+.parallax1 {
+    position: relative;
+    overflow: hidden;
+    background-image: url(assets/city.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 300px;
+
+    /* margin-bottom: 500px; */
+
+}
+
+.parallax3 {
+    position: relative;
+    overflow: hidden;
+    background-image: url(assets/city.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 410px;
+
+    /* margin-bottom: 500px; */
+
+}
+
+
+.parallax32 {
+    position: relative;
+    overflow: hidden;
+    background-image: url(assets/city.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 650px;
+
+    /* margin-bottom: 500px; */
+
+}
+
+.parallax1Cover {
+    margin-top: 0px;
+
+    height: 300px;
+    display: grid;
+    grid-template-columns: auto auto;
+
+
+
+}
+
+.box {
+    background-color: white;
+
+
+}
+
+.boxHole {
+    background-color: transparent;
+    display: grid;
+    grid-template-columns: auto auto auto;
+
+}
+
+
+
+
+
+
+
+.microColor {
+    background-color: transparent;
+    shape-margin: 0px;
+    outline: 5px solid white;
+    border-radius: 10px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+
+
+@keyframes example {
+    0% {
+        background-color: white;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: transparent;
+        left: 100px;
+        top: 0px;
+    }
+
+    /* here */
+    50% {
+        background-color: white;
+        left: 100px;
+        top: 100px;
+    }
+
+    75% {
+        background-color: transparent;
+        left: 0px;
+        top: 100px;
+    }
+
+    100% {
+        background-color: white;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+/*  */
+.microColor:hover {
+    background-color: rgba(255, 255, 255, 0.414);
+    animation: example 3s;
+}
+
+/*  */
+
+.micro {
+    background-color: transparent;
+}
+
+.boxHoleInsert {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.insert {
+    height: 100%;
+    flex: 1;
+    background-color: transparent;
+    /* border: 5px solid white; */
+    border-radius: 10px;
+
+}
+
+.mini {
+    background-color: rgba(255, 255, 255, 0.523);
+    width: 100%;
+    height: 100%;
+}
+
+.mini:hover {
+    background-color: transparent;
+
+}
+
+@keyframes fadeInOut {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.display {
+
+    position: absolute;
+    color: black;
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px white;
+    font-weight: bold;
+    text-align: center;
+    z-index: 10;
+
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    /* Start hidden */
+    animation: fadeInOut 7s ease-in-out infinite;
+    /* 7s duration for a complete cycle */
+}
+
+
+
+/* Nav */
+
+.nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    /* Changed to take full width of the viewport */
+    justify-content: space-between;
+    background-color: transparent;
+    color: black;
+
+    align-items: center;
+    height: 2vh;
+    z-index: 102;
+    padding: 50px;
+
+}
+
+.trans {
+    background-color: white;
+}
+
+
+
+.navItems {
+    color: #000;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 100px;
+
+}
+
+.navItems a {
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    margin: 15px;
+    font-weight: bold;
+
+}
+
+
+.navItems:hover~#avatar {
+
+
+    transition: all 1s ease-out;
+    /* Added transition property for smooth movement with ease-out */
+    transform: translateX(-200px);
+    /* Move the image 20px to the right when nav is hovered */
+    width: 200ppx;
+}
+
+.navItems a:hover {
+
+    transition: all 0.3s ease-out;
+    /* Changed ease to ease-out for a slower transition */
+    background-color: white;
+    color: black;
+    padding: 15px;
+
+    /* Trigger the animation on the avatar image */
+
+}
+
+.avatar img {
+
+    overflow: hidden;
+    width: 130px;
+    height: 90px;
+    position: relative;
+    margin-right: 100px;
+}
+
+
+
+
+
+/* Intro */
+
+.intro {
+
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    height: 400px;
+    width: 99%;
+    z-index: 100;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+
+
+
+
+}
+
+
+.introText {
+
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.466);
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+
+    /* border-radius: 10px; */
+    padding: 20px;
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: bold;
+
+
+
+}
+
+
+
+.introText .profile {
+    float: right;
+    border-radius: 20px;
+}
+
+.introText2 {
+
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.466);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin-left: 10px;
+
+
+
+}
+
+
+.intro2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: transparent;
+    height: 600px;
+    width: 100%;
+    z-index: 100;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+
+
+
+}
+
+.introText3 {
+
+    height: 90%;
+    background-color: transparent;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin-left: 10px;
+
+
+
+}
+
+.introText4 {
+
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.299);
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+
+}
+
+.introText5 {
+
+    height: 90%;
+    background-color: white;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /* border-radius: 10px; */
+    padding: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+
+
+}
+
+/*   Typewriter Effect  */
+.css-typing h3 {
+    border-right: .15em solid orange;
+    /* font-family: "Courier"; */
+    font-size: 1.2rem;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type 20s steps(40, end) infinite;
+    /* Edited to animate infinitely */
+}
+
+.css-typing h3 {
+    width: 15.3em;
+    -webkit-animation: type 4s steps(40, end) infinite;
+    /* Edited to animate infinitely */
+    animation: type 4s steps(40, end) infinite;
+    /* Edited to animate infinitely */
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+@keyframes type {
+    0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@-webkit-keyframes type {
+    0% {
+        width: 0;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        border: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@-webkit-keyframes type2 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    99.9% {
+        border-right: .15em solid orange;
+    }
+
+    100% {
+        opacity: 1;
+        border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes type3 {
+    0% {
+        width: 0;
+    }
+
+    1% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@-webkit-keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/*   Typewriter Effect  */
+
+.columnContainer {
+    display: flex;
+    justify-content: space-evenly;
+    /* flex-direction: row; */
+
+
+}
+
+.column {
+    font-family: 'Concert One', cursive;
+    font-size: 1.25rem;
+
+}
+
+/*Cube*/
+@keyframes turn {
+    from {
+        transform: scale(0.88) rotate3d(0, 0, 0, 0);
+    }
+
+    /* Increased the scale by 10% */
+    to {
+        transform: scale(0.88) rotate3d(1, 1, 0, 360deg);
+    }
+
+    /* Increased the scale by 10% */
+}
+
+.container {
+    width: 320px;
+    /* Decreased the width by 20% */
+    height: 320px;
+    /* Decreased the height by 20% */
+    perspective: 500px;
+    margin: 100px;
+}
+
+.cube {
+    position: relative;
+    width: 352px;
+    /* Increased the width by 10% */
+    height: 352px;
+    /* Increased the height by 10% */
+    transform-style: preserve-3d;
+    animation: turn 20s linear infinite;
+    cursor: grab;
+    /* Added cursor style for grabbing */
+    user-select: none;
+    /* Prevent text selection while dragging */
+}
+
+.cube:active {
+    cursor: grabbing;
+    /* Change cursor style when cube is being dragged */
+}
+
+.face {
+    width: 352px;
+    /* Increased the width by 10% */
+    height: 352px;
+    /* Increased the height by 10% */
+    background: rgba(255, 255, 255, 0.37);
+    border: 2px solid white;
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    transform-style: preserve-3d;
+    /* Added to ensure faces are angled straight */
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    /* Ensuring faces are straight */
+    transition: transform 1000ms;
+    /* Added transition for smooth rotation */
+
+    background-color: rgba(255, 255, 255, 0.47);
+    opacity: 1;
+}
+
+.front {
+    transform: scale(0.88) translateZ(176px);
+    /* Increased the translation by 10% */
+}
+
+.back {
+    transform: scale(0.88) translateZ(-176px) rotateY(180deg);
+    /* Increased the translation by 10% */
+}
+
+.left {
+    transform: scale(0.88) translateX(-176px) rotateY(-90deg);
+    /* Increased the translation by 10% */
+}
+
+.right {
+    transform: scale(0.88) translateX(176px) rotateY(90deg);
+    /* Increased the translation by 10% */
+}
+
+.top {
+    transform: scale(0.88) translateY(-176px) rotateX(90deg);
+    /* Increased the translation by 10% */
+}
+
+.bottom {
+    transform: scale(0.88) translateY(176px) rotateX(-90deg);
+    /* Increased the translation by 10% */
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cube {
+        animation: none;
+        transform: scale(0.88) rotate3d(1, 1, 0, 45deg);
+        /* Increased the scale by 10% */
+    }
+}
+
+
+.cube img {
+    width: 100%;
+    height: 100%;
+}
+
+/************************************************/
+.projects {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.project {
+    background-color: rgba(255, 255, 255, 0.466);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin: 5px;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.ProjectsTitle {
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+/*****************************************************/
+.CardContainer {
+    width: 500px;
+    /* Increased width to 500px */
+    height: 200px;
+    perspective: 500px;
+    margin: 100px;
+}
+
+.card {
+    position: relative;
+    width: 500px;
+    /* Increased width to 500px */
+    height: 200px;
+    transform-style: preserve-3d;
+    transform: rotate3d(1, 1, 0, 45deg);
+    animation: move 5s linear infinite;
+}
+
+.CardFace {
+    width: 400px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.34);
+    border: 2px solid white;
+    position: absolute;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 6px white;
+}
+
+.layer1 {
+    transform: translateZ(50px);
+    background-color: rgba(255, 255, 255, 0.37);
+    opacity: 1;
+    /* make this layer not transparent */
+}
+
+.layer2 {
+    transform: translateZ(25px);
+}
+
+.layer3 {
+    transform: translateZ(0px);
+}
+
+.layer4 {
+    transform: translateZ(-25px);
+}
+
+.layer5 {
+    transform: translateZ(-50px);
+}
+
+@keyframes move {
+    0% {
+        transform: rotate3d(1, 1, 0, 0deg) translateZ(0px);
+    }
+
+    25% {
+        transform: rotate3d(1, 1, 0, 45deg) translateZ(50px);
+    }
+
+    50% {
+        transform: rotate3d(1, 1, 0, 45deg) translateZ(100px);
+    }
+
+    75% {
+        transform: rotate3d(1, 1, 0, 45deg) translateZ(50px);
+    }
+
+    100% {
+        transform: rotate3d(1, 1, 0, 0deg) translateZ(0px);
+    }
+}
+
+
+/* @keyframes turn {
+    0% {
+        transform: rotate3d(1, 2, 0, 0deg) translateZ(0px);
+    }
+
+    25% {
+        transform: rotate3d(1, 2, 0, 90deg) translateZ(50px);
+    }
+
+    50% {
+        transform: rotate3d(1, 2, 0, 180deg) translateZ(100px);
+    }
+
+    75% {
+        transform: rotate3d(1, 2, 0, 270deg) translateZ(50px);
+    }
+
+    100% {
+        transform: rotate3d(1, 2, 0, 360deg) translateZ(0px);
+    }
+} */
+
+.downloadBtn {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px 6px grey;
+    font-family: 'Concert One', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Concert One', cursive;
+    font-size: 1.8rem;
+    color: black; /* Changed anchor color to black */
+}
+
+a:link {
+    color: black;
+    background-color: transparent;
+    
+}  
